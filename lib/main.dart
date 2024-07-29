@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+//
+void main() => runApp(const LoginApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+// Rename
+class LoginApp extends StatelessWidget {
+  const LoginApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      // Eliminated debug sign
+      debugShowCheckedModeBanner: false,
+      // Theme
+      theme: ThemeData(
+        useMaterial3: true,
+        platform: TargetPlatform.android,
+        // Calling login Page
       ),
+      // Material Route
+      home: const LoginApp(),
     );
   }
 }
