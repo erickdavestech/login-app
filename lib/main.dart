@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/Ui/Pages/login_page.dart';
 
 //
 void main() => runApp(const LoginApp());
@@ -12,14 +13,13 @@ class LoginApp extends StatelessWidget {
     return MaterialApp(
       // Eliminated debug sign
       debugShowCheckedModeBanner: false,
-      // Theme
+      //    Theme
       theme: ThemeData(
         useMaterial3: true,
         platform: TargetPlatform.android,
-        // Calling login Page
       ),
-      // Material Route
-      home: const LoginApp(),
+      // Calling login Page
+      home: const LoginPage(),
     );
   }
 }
